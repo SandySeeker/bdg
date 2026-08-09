@@ -1,0 +1,848 @@
+<?php
+/**
+ * Project Name: BDG Game Official Enterprise Landing Page
+ * Version: 6.0.0 Ultimate SEO & Payment Integration Edition
+ * Description: High-conversion responsive landing page with comprehensive deposit/withdrawal methods 
+ *              (UPI, Bank Transfer, BTC, USD Crypto), advanced SEO structure, VIP system, and interactive FAQs.
+ */
+
+// Core Configuration & Variables
+$site_name       = "BDG Game India";
+$invitation_code = "413385648747";
+$registration_url= "https://bdg7.vip//#/register?invitationCode=" . $invitation_code;
+$telegram_url    = "https://t.me/bdg_game_official";
+$support_email   = "support@bdg7.vip";
+$apk_size        = "8.20 MB";
+$min_deposit     = "₹100";
+$signup_bonus    = "₹21+";
+$total_games     = "150+";
+?>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Comprehensive SEO Meta Tags -->
+    <title>BDG Game Official - India's #1 Color Prediction, Lottery & Casino Platform | Login & Register</title>
+    <meta name="title" content="BDG Game Official - India's #1 Color Prediction, Lottery & Casino Platform | Login & Register">
+    <meta name="description" content="Play BDG Game in India! Enjoy color prediction, lottery & slots. Register with code 413385648747 to claim ₹21+ sign-up bonus, instant UPI, Bank, and Crypto (BTC/USD) withdrawals.">
+    <meta name="keywords" content="BDG Game, BDG Game login, BDG Game register, color prediction game India, win money online, online lottery India, slots casino app, BDG APK download, prediction gaming platform, fast withdrawal gaming site, sign up bonus game app, invitation code 413385648747, UPI deposit game, Bitcoin casino India, bank transfer gaming app, USD crypto betting site">
+    <meta name="author" content="<?php echo $site_name; ?>">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://bdg7.vip/">
+
+    <!-- Open Graph / Facebook & WhatsApp Sharing Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bdg7.vip/">
+    <meta property="og:title" content="BDG Game Official - Play & Win Real Cash Daily with Instant UPI & Crypto Payouts">
+    <meta property="og:description" content="Join thousands of players in India's most trusted gaming portal. Fast UPI, Bank, and BTC/USD transactions, 150+ games, and exclusive daily bonuses. Use invitation code 413385648747!">
+    <meta property="og:image" content="https://bdg7.vip/og-banner.jpg">
+
+    <!-- Structured Data (JSON-LD) for Google SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "<?php echo $site_name; ?>",
+      "url": "https://bdg7.vip/",
+      "potentialAction": {
+        "@type": "RegisterAction",
+        "target": "<?php echo $registration_url; ?>",
+        "query-input": "required name=invitationCode"
+      }
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👑</text></svg>">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            950: '#070a12',
+                            900: '#0b0f19',
+                            800: '#111827',
+                            700: '#1f2937',
+                            600: '#374151',
+                        },
+                        gold: {
+                            300: '#fde047',
+                            400: '#facc15',
+                            500: '#eab308',
+                            600: '#ca8a04',
+                            700: '#a16207',
+                            metallic: '#d4af37',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS Animations & Styling -->
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-6px); }
+        }
+        @keyframes pulseGold {
+            0%, 100% { box-shadow: 0 0 12px rgba(212, 175, 55, 0.4); }
+            50% { box-shadow: 0 0 25px rgba(212, 175, 55, 0.7); }
+        }
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .animate-float { animation: float 4s ease-in-out infinite; }
+        .animate-pulse-gold { animation: pulseGold 2.5s infinite; }
+        .animate-marquee { display: inline-block; animation: marquee 25s linear infinite; }
+        .gradient-gold { background: linear-gradient(135deg, #fef08a 0%, #d4af37 50%, #ca8a04 100%); }
+        .text-gradient-gold { background: linear-gradient(135deg, #fef08a 0%, #d4af37 60%, #eab308 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        html { scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #070a12; }
+        ::-webkit-scrollbar-thumb { background: #d4af37; border-radius: 3px; }
+    </style>
+</head>
+<body class="bg-brand-950 text-slate-100 font-sans antialiased selection:bg-gold-500 selection:text-black pb-24 md:pb-0">
+
+    <!-- Toast Notification Popup Container -->
+    <div id="toast" class="fixed bottom-20 right-4 z-50 transform translate-y-20 opacity-0 transition-all duration-300 bg-emerald-600 text-white px-4 py-2.5 rounded-xl shadow-2xl text-xs sm:text-sm font-semibold flex items-center space-x-2 border border-emerald-400/30">
+        <i class="fa-solid fa-circle-check text-lg"></i>
+        <span id="toast-message">Action executed successfully!</span>
+    </div>
+
+    <!-- Top Utility Announcement Bar -->
+    <div class="hidden sm:block bg-brand-900 border-b border-slate-800 text-xs py-2 px-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2 text-slate-400">
+                <span class="flex items-center"><img src="https://flagcdn.com/w20/in.png" alt="India" class="mr-1 rounded-sm"> Official India Gaming Portal</span>
+                <span>|</span>
+                <span class="text-gold-400 font-medium"><i class="fa-solid fa-shield-halved mr-1"></i> 100% Secure SSL Encrypted & Multi-Currency Payouts</span>
+            </div>
+            <div class="flex items-center space-x-3">
+                <a href="<?php echo $telegram_url; ?>" target="_blank" class="text-sky-400 hover:text-sky-300 font-medium flex items-center">
+                    <i class="fa-brands fa-telegram mr-1"></i> Telegram Channel
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="sticky top-0 z-40 bg-brand-950/95 backdrop-blur-md border-b border-slate-800 shadow-xl">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <a href="#home" class="flex items-center space-x-2 group">
+                    <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl gradient-gold flex items-center justify-center text-slate-950 font-black text-lg sm:text-2xl shadow-md">
+                        B
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-lg sm:text-2xl font-black tracking-wider text-gradient-gold">BDG GAME</span>
+                        <span class="text-[9px] uppercase tracking-widest text-slate-400 font-semibold -mt-1">Official Portal</span>
+                    </div>
+                </a>
+            </div>
+            
+            <nav class="hidden lg:flex items-center space-x-8 font-medium text-sm">
+                <a href="#home" class="hover:text-gold-400 transition-colors">Home</a>
+                <a href="#details" class="hover:text-gold-400 transition-colors">App Details</a>
+                <a href="#games" class="hover:text-gold-400 transition-colors">Games</a>
+                <a href="#payments" class="hover:text-gold-400 transition-colors">Payments</a>
+                <a href="#vip" class="hover:text-gold-400 transition-colors">VIP System</a>
+                <a href="#bonus" class="hover:text-gold-400 transition-colors">Promotions</a>
+                <a href="#faq" class="hover:text-gold-400 transition-colors">FAQs</a>
+            </nav>
+
+            <div class="flex items-center space-x-2 sm:space-x-3">
+                <a href="<?php echo $registration_url; ?>" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center space-x-1.5 px-3.5 py-2 rounded-xl text-xs font-bold bg-brand-900 hover:bg-brand-800 text-gold-400 border border-gold-500/30 transition-all">
+                    <i class="fa-solid fa-download"></i>
+                    <span>Download</span>
+                </a>
+                <a href="<?php echo $registration_url; ?>" target="_blank" rel="noopener noreferrer" class="px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold gradient-gold text-slate-950 shadow-md hover:opacity-95 transition-all">
+                    <i class="fa-solid fa-user-plus mr-1"></i> Register
+                </a>
+                <button id="mobile-menu-btn" class="lg:hidden text-slate-300 hover:text-white p-1.5 text-lg focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Refined Compact Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-brand-900 border-b border-slate-800 px-4 py-3 space-y-2 text-sm shadow-xl">
+            <a href="#home" class="block py-1.5 text-slate-300 hover:text-gold-400 border-b border-slate-800/60 font-medium">Home</a>
+            <a href="#details" class="block py-1.5 text-slate-300 hover:text-gold-400 border-b border-slate-800/60 font-medium">App Details</a>
+            <a href="#games" class="block py-1.5 text-slate-300 hover:text-gold-400 border-b border-slate-800/60 font-medium">Games Library</a>
+            <a href="#payments" class="block py-1.5 text-slate-300 hover:text-gold-400 border-b border-slate-800/60 font-medium">Payment & Withdrawal Methods</a>
+            <a href="#vip" class="block py-1.5 text-slate-300 hover:text-gold-400 border-b border-slate-800/60 font-medium">VIP System</a>
+            <a href="#bonus" class="block py-1.5 text-slate-300 hover:text-gold-400 border-b border-slate-800/60 font-medium">Promotions & Bonuses</a>
+            <a href="#faq" class="block py-1.5 text-slate-300 hover:text-gold-400 border-b border-slate-800/60 font-medium">FAQs</a>
+            <a href="#contact" class="block py-1.5 text-slate-300 hover:text-gold-400 font-medium">Contact Us</a>
+        </div>
+    </header>
+
+    <!-- Ticker / Warning Marquee -->
+    <div class="bg-brand-900/90 border-b border-gold-500/20 py-2 px-3 overflow-hidden text-xs">
+        <div class="max-w-7xl mx-auto flex items-center space-x-2">
+            <div class="flex items-center text-amber-400 font-bold whitespace-nowrap animate-pulse">
+                <i class="fa-solid fa-bullhorn mr-1.5"></i> Notice:
+            </div>
+            <div class="overflow-hidden whitespace-nowrap w-full">
+                <p class="text-slate-300 inline-block animate-marquee text-xs">
+                    Please remember the UPI ID of your payment and fill in the correct UTR number. Now supporting UPI, Direct Bank Transfer, BTC, and USD Crypto withdrawals!
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section with Screenshot Preview -->
+    <section id="home" class="relative pt-8 sm:pt-12 pb-16 sm:pb-24 overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#d4af37_1px,transparent_1px)] [background-size:20px_20px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                
+                <!-- Left Column: Text Content & Invitation Code -->
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full text-[11px] font-bold bg-gold-500/10 text-gold-400 border border-gold-500/30 mb-4 shadow-sm">
+                        <i class="fa-solid fa-award"></i>
+                        <span>BDG Game - Login & Download In India</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight mb-4 sm:mb-6 leading-tight">
+                        Start Playing & <span class="text-gradient-gold">Win Big Today!</span>
+                    </h1>
+
+                    <p class="text-sm sm:text-base lg:text-lg text-slate-300 mb-6 sm:mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        Welcome to the official online entertainment platform. BDG Game provides skill-based and prediction games with complete peace of mind, instant UPI & Crypto payouts, and a seamless mobile experience.
+                    </p>
+
+                    <!-- Invitation Code Box -->
+                    <div class="max-w-sm mx-auto lg:mx-0 mb-6 sm:mb-8 bg-brand-900 p-3.5 sm:p-4 rounded-xl sm:rounded-2xl border border-gold-500/40 shadow-xl">
+                        <p class="text-[11px] text-slate-400 uppercase font-semibold mb-1.5">Exclusive Invitation Code</p>
+                        <div class="flex items-center justify-between bg-brand-950 px-3 py-2 rounded-lg sm:rounded-xl border border-slate-800">
+                            <span class="font-mono text-lg sm:text-xl font-bold text-gold-400 tracking-wider"><?php echo $invitation_code; ?></span>
+                            <button onclick="copyCode('<?php echo $invitation_code; ?>')" class="px-3 py-1.5 bg-gold-500 hover:bg-gold-400 text-slate-950 font-bold rounded-lg text-xs transition-all flex items-center space-x-1 shadow-md">
+                                <i class="fa-regular fa-copy"></i>
+                                <span>Copy</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Main CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-3">
+                        <a href="<?php echo $registration_url; ?>" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-6 sm:px-8 py-3.5 rounded-xl sm:rounded-2xl text-sm sm:text-base font-extrabold gradient-gold text-slate-950 shadow-xl animate-pulse-gold hover:opacity-95 transition-all flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>Register & Claim Bonus</span>
+                        </a>
+                        <a href="#payments" class="w-full sm:w-auto px-6 sm:px-8 py-3.5 rounded-xl sm:rounded-2xl text-sm sm:text-base font-semibold bg-brand-900 hover:bg-brand-800 text-slate-200 border border-slate-700 transition-all flex items-center justify-center space-x-2 shadow-md">
+                            <i class="fa-solid fa-wallet text-gold-400"></i>
+                            <span>Payment Methods</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Page / App Screenshot Mockup -->
+                <div class="lg:col-span-5 flex justify-center mt-4 lg:mt-0">
+                    <div class="relative w-full max-w-sm">
+                        <!-- Glow Effect Behind Screenshot -->
+                        <div class="absolute -inset-1 bg-gradient-to-r from-gold-500 to-amber-600 rounded-3xl blur-xl opacity-30 animate-pulse"></div>
+                        
+                        <!-- Screenshot Container -->
+                        <div class="relative bg-brand-900 p-3 rounded-3xl border border-gold-500/30 shadow-2xl">
+                            <img src="app-screenshot.png" alt="BDG Game Interface Screenshot" class="rounded-2xl w-full h-auto object-cover border border-slate-800 shadow-inner">
+                            <div class="mt-3 text-center">
+                                <span class="text-xs text-slate-400 font-medium"><i class="fa-solid fa-mobile-screen-button mr-1 text-gold-400"></i> Live In-App & Mobile Experience</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Live Simulated Winners Ticker -->
+    <section class="bg-brand-900 border-y border-slate-800 py-3 text-xs">
+        <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
+            <div class="flex items-center space-x-1.5 text-gold-400 font-bold whitespace-nowrap mr-2">
+                <i class="fa-solid fa-trophy"></i>
+                <span>Winners:</span>
+            </div>
+            <div id="winner-ticker" class="text-slate-300 font-medium truncate">
+                🎉 Rahul_99*** won <span class="text-emerald-400 font-bold">₹14,500</span> in Color Prediction!
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Stats Bar -->
+    <section class="py-8 bg-brand-900/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+            <div class="p-4 rounded-xl bg-brand-900 border border-slate-800 shadow-sm">
+                <p class="text-2xl sm:text-3xl font-black text-gold-400 mb-0.5"><?php echo $total_games; ?></p>
+                <p class="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Total Games</p>
+            </div>
+            <div class="p-4 rounded-xl bg-brand-900 border border-slate-800 shadow-sm">
+                <p class="text-2xl sm:text-3xl font-black text-emerald-400 mb-0.5"><?php echo $signup_bonus; ?></p>
+                <p class="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Sign-Up Bonus</p>
+            </div>
+            <div class="p-4 rounded-xl bg-brand-900 border border-slate-800 shadow-sm">
+                <p class="text-2xl sm:text-3xl font-black text-gold-400 mb-0.5">100%</p>
+                <p class="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Fair Play</p>
+            </div>
+            <div class="p-4 rounded-xl bg-brand-900 border border-slate-800 shadow-sm">
+                <p class="text-2xl sm:text-3xl font-black text-sky-400 mb-0.5">Instant</p>
+                <p class="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">UPI / Crypto Payouts</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Details Table Section -->
+    <section id="details" class="py-14 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+            <span class="text-gold-400 font-bold text-xs uppercase tracking-widest">Platform Specs</span>
+            <h2 class="text-2xl sm:text-4xl font-black mt-1.5 mb-2">BDG Game App Details</h2>
+            <p class="text-slate-400 max-w-xl mx-auto text-xs sm:text-sm">Lightweight and high-performance application designed for all Android and iOS phones.</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            <div class="bg-brand-900 p-4 sm:p-5 rounded-xl border border-slate-800 text-center shadow-sm">
+                <p class="text-[11px] text-slate-400 uppercase font-semibold mb-1">App Name</p>
+                <p class="text-sm sm:text-base font-bold text-gold-400"><?php echo $site_name; ?></p>
+            </div>
+            <div class="bg-brand-900 p-4 sm:p-5 rounded-xl border border-slate-800 text-center shadow-sm">
+                <p class="text-[11px] text-slate-400 uppercase font-semibold mb-1">Category</p>
+                <p class="text-sm sm:text-base font-bold text-gold-400">Gaming</p>
+            </div>
+            <div class="bg-brand-900 p-4 sm:p-5 rounded-xl border border-slate-800 text-center shadow-sm">
+                <p class="text-[11px] text-slate-400 uppercase font-semibold mb-1">APK Size</p>
+                <p class="text-sm sm:text-base font-bold text-gold-400"><?php echo $apk_size; ?></p>
+            </div>
+            <div class="bg-brand-900 p-4 sm:p-5 rounded-xl border border-slate-800 text-center shadow-sm">
+                <p class="text-[11px] text-slate-400 uppercase font-semibold mb-1">Register Bonus</p>
+                <p class="text-sm sm:text-base font-bold text-emerald-400"><?php echo $signup_bonus; ?></p>
+            </div>
+            <div class="bg-brand-900 p-4 sm:p-5 rounded-xl border border-slate-800 text-center shadow-sm">
+                <p class="text-[11px] text-slate-400 uppercase font-semibold mb-1">Min Deposit</p>
+                <p class="text-sm sm:text-base font-bold text-sky-400"><?php echo $min_deposit; ?></p>
+            </div>
+            <div class="bg-brand-900 p-4 sm:p-5 rounded-xl border border-slate-800 text-center shadow-sm">
+                <p class="text-[11px] text-slate-400 uppercase font-semibold mb-1">Total Games</p>
+                <p class="text-sm sm:text-base font-bold text-gold-400"><?php echo $total_games; ?></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: Comprehensive Deposit & Withdrawal Methods -->
+    <section id="payments" class="py-16 bg-brand-900/50 border-y border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-gold-400 font-bold text-xs uppercase tracking-widest">Financial Transactions</span>
+                <h2 class="text-2xl sm:text-4xl font-black mt-1.5 mb-3">Deposit & Withdrawal Methods</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto text-xs sm:text-sm">
+                    BDG Game offers multiple secure, fast, and reliable transaction channels tailored for Indian and international players. Choose from UPI, direct bank transfers, Bitcoin, and USD crypto assets.
+                </p>
+            </div>
+
+            <!-- Grid of Payment Methods -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                
+                <!-- 1. UPI Payment -->
+                <div class="bg-brand-900 p-6 rounded-2xl border border-slate-800 shadow-lg flex flex-col justify-between hover:border-gold-500/50 transition-all">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl font-bold mb-4">
+                            <i class="fa-solid fa-mobile-screen"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">UPI Payments</h3>
+                        <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-4">
+                            Seamless deposits and withdrawals via Google Pay, PhonePe, Paytm, and BHIM UPI with instant UTR verification.
+                        </p>
+                    </div>
+                    <div class="border-t border-slate-800 pt-3 text-xs text-slate-300 flex justify-between">
+                        <span>Speed: <strong class="text-emerald-400">Instant</strong></span>
+                        <span>Min: <strong>₹100</strong></span>
+                    </div>
+                </div>
+
+                <!-- 2. Bank Account Transfer -->
+                <div class="bg-brand-900 p-6 rounded-2xl border border-slate-800 shadow-lg flex flex-col justify-between hover:border-gold-500/50 transition-all">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center text-xl font-bold mb-4">
+                            <i class="fa-solid fa-building-columns"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Bank Account</h3>
+                        <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-4">
+                            Direct IMPS, NEFT, and RTGS bank account transfers. Perfect for large withdrawals and high-volume players.
+                        </p>
+                    </div>
+                    <div class="border-t border-slate-800 pt-3 text-xs text-slate-300 flex justify-between">
+                        <span>Speed: <strong class="text-sky-400">1-3 Hours</strong></span>
+                        <span>Min: <strong>₹500</strong></span>
+                    </div>
+                </div>
+
+                <!-- 3. Bitcoin (BTC) -->
+                <div class="bg-brand-900 p-6 rounded-2xl border border-slate-800 shadow-lg flex flex-col justify-between hover:border-gold-500/50 transition-all">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-xl font-bold mb-4">
+                            <i class="fa-brands fa-bitcoin"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Bitcoin (BTC)</h3>
+                        <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-4">
+                            Decentralized and secure cryptocurrency deposits and payouts via Bitcoin network with absolute privacy.
+                        </p>
+                    </div>
+                    <div class="border-t border-slate-800 pt-3 text-xs text-slate-300 flex justify-between">
+                        <span>Speed: <strong class="text-amber-400">Network Confirmed</strong></span>
+                        <span>Min: <strong>0.0005 BTC</strong></span>
+                    </div>
+                </div>
+
+                <!-- 4. USD / USDT Crypto -->
+                <div class="bg-brand-900 p-6 rounded-2xl border border-slate-800 shadow-lg flex flex-col justify-between hover:border-gold-500/50 transition-all">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-xl font-bold mb-4">
+                            <i class="fa-solid fa-dollar-sign"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">USD / USDT Crypto</h3>
+                        <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-4">
+                            Stablecoin USDT (TRC20 / ERC20) and USD wallet settlements for lightning-fast cross-border transactions.
+                        </p>
+                    </div>
+                    <div class="border-t border-slate-800 pt-3 text-xs text-slate-300 flex justify-between">
+                        <span>Speed: <strong class="text-purple-400">Instant</strong></span>
+                        <span>Min: <strong>$10 USD</strong></span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Detailed Step-by-Step Payment Instructions -->
+            <div class="bg-brand-900 p-8 rounded-3xl border border-slate-800 shadow-xl grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+                        <i class="fa-solid fa-circle-arrow-down text-emerald-400 mr-2"></i> How to Deposit Funds
+                    </h3>
+                    <ol class="space-y-3 text-xs sm:text-sm text-slate-300 list-decimal list-inside leading-relaxed">
+                        <li>Log into your BDG Game account and navigate to the <strong>Wallet</strong> section.</li>
+                        <li>Click on <strong>Deposit</strong> and select your preferred method (UPI, Bank, BTC, or USD).</li>
+                        <li>Enter the deposit amount (Minimum ₹100 or equivalent crypto).</li>
+                        <li>Complete the transaction using your UPI app or crypto wallet.</li>
+                        <li>Copy and enter the exact <strong>UTR Number</strong> / transaction hash to instantly credit your balance.</li>
+                    </ol>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+                        <i class="fa-solid fa-circle-arrow-up text-sky-400 mr-2"></i> How to Withdraw Winnings
+                    </h3>
+                    <ol class="space-y-3 text-xs sm:text-sm text-slate-300 list-decimal list-inside leading-relaxed">
+                        <li>Go to your account dashboard and click on <strong>Withdraw</strong>.</li>
+                        <li>Link your verified UPI ID, Bank Account details, or Crypto wallet address.</li>
+                        <li>Enter the withdrawal amount adhering to the daily transaction limits.</li>
+                        <li>Confirm your transaction password for security verification.</li>
+                        <li>Receive funds directly in your bank account or crypto wallet within minutes!</li>
+                    </ol>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Core Pillars: What is it, How it works, Why choose -->
+    <section class="py-14 bg-brand-900/40 border-y border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-brand-900 p-6 sm:p-7 rounded-2xl border border-slate-800 shadow-md">
+                <div class="w-12 h-12 rounded-xl gradient-gold text-slate-950 flex items-center justify-center text-xl font-bold mb-4 shadow-md">
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <h3 class="text-lg font-bold mb-2 text-white">What is BDG Game?</h3>
+                <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                    We are a web-based gaming platform that provides interactive and prediction games, enabling users to play safely in a user-friendly environment.
+                </p>
+            </div>
+
+            <div class="bg-brand-900 p-6 sm:p-7 rounded-2xl border border-slate-800 shadow-md">
+                <div class="w-12 h-12 rounded-xl gradient-gold text-slate-950 flex items-center justify-center text-xl font-bold mb-4 shadow-md">
+                    <i class="fa-solid fa-gears"></i>
+                </div>
+                <h3 class="text-lg font-bold mb-2 text-white">How It Works</h3>
+                <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                    Create an account through simple registration, add funds securely via UPI or Crypto, and choose a game to win rewards based on your performance.
+                </p>
+            </div>
+
+            <div class="bg-brand-900 p-6 sm:p-7 rounded-2xl border border-slate-800 shadow-md">
+                <div class="w-12 h-12 rounded-xl gradient-gold text-slate-950 flex items-center justify-center text-xl font-bold mb-4 shadow-md">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <h3 class="text-lg font-bold mb-2 text-white">Why Choose Us</h3>
+                <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                    Our mission is to provide a pleasant experience with instant UPI & crypto transactions, simple navigation, diverse game choices, and continuous platform updates.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Games / Features Showcase Section -->
+    <section id="games" class="py-16 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <span class="text-gold-400 font-bold text-xs uppercase tracking-widest">Entertainment</span>
+            <h2 class="text-2xl sm:text-4xl font-black mt-1.5 mb-2">Popular Game Categories</h2>
+            <p class="text-slate-400 max-w-xl mx-auto text-xs sm:text-sm">Color prediction or quick interactive rounds tailored for maximum mobile thrill.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-brand-900 rounded-2xl p-6 border border-slate-800 shadow-lg flex flex-col justify-between">
+                <div>
+                    <div class="h-36 rounded-xl bg-gradient-to-br from-amber-600/20 to-brand-950 flex items-center justify-center mb-4 border border-amber-500/20">
+                        <i class="fa-solid fa-ticket text-5xl text-gold-400 animate-float"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-white">Lottery & Color Prediction</h3>
+                    <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-4">
+                        Engage in fast color prediction and lottery challenges with simple rules and instant results.
+                    </p>
+                </div>
+                <a href="<?php echo $registration_url; ?>" target="_blank" class="w-full py-2.5 text-center rounded-xl bg-brand-950 text-gold-400 font-bold text-xs sm:text-sm border border-gold-500/30 hover:bg-gold-500 hover:text-slate-950 transition-all">
+                    Play Lottery Games &rarr;
+                </a>
+            </div>
+
+            <div class="bg-brand-900 rounded-2xl p-6 border border-slate-800 shadow-lg flex flex-col justify-between">
+                <div>
+                    <div class="h-36 rounded-xl bg-gradient-to-br from-sky-600/20 to-brand-950 flex items-center justify-center mb-4 border border-sky-500/20">
+                        <i class="fa-solid fa-jet-fighter text-5xl text-sky-400 animate-float"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-white">Original Skill Games</h3>
+                    <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-4">
+                        Explore exclusive mini-games optimized for mobile performance and updated daily.
+                    </p>
+                </div>
+                <a href="<?php echo $registration_url; ?>" target="_blank" class="w-full py-2.5 text-center rounded-xl bg-brand-950 text-sky-400 font-bold text-xs sm:text-sm border border-sky-500/30 hover:bg-sky-500 hover:text-slate-950 transition-all">
+                    Play Original Games &rarr;
+                </a>
+            </div>
+
+            <div class="bg-brand-900 rounded-2xl p-6 border border-slate-800 shadow-lg flex flex-col justify-between">
+                <div>
+                    <div class="h-36 rounded-xl bg-gradient-to-br from-emerald-600/20 to-brand-950 flex items-center justify-center mb-4 border border-emerald-500/20">
+                        <i class="fa-solid fa-dice text-5xl text-emerald-400 animate-float"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-white">Slots & Live Casino</h3>
+                    <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-4">
+                        Spin immersive slot reels with absolute fairness and equal opportunity to win.
+                    </p>
+                </div>
+                <a href="<?php echo $registration_url; ?>" target="_blank" class="w-full py-2.5 text-center rounded-xl bg-brand-950 text-emerald-400 font-bold text-xs sm:text-sm border border-emerald-500/30 hover:bg-emerald-500 hover:text-slate-950 transition-all">
+                    Play Slots Games &rarr;
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIP Rewards System Section -->
+    <section id="vip" class="py-16 bg-brand-900/60 border-y border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <span class="text-gold-400 font-bold text-xs uppercase tracking-widest">Benefits</span>
+                <h2 class="text-2xl sm:text-4xl font-black mt-1.5 mb-2">BDG Game VIP Level System</h2>
+                <p class="text-slate-400 max-w-xl mx-auto text-xs sm:text-sm">Level up your account to unlock higher cashback rates and monthly bonuses.</p>
+            </div>
+
+            <div class="overflow-x-auto shadow-xl rounded-xl border border-slate-800">
+                <table class="w-full text-left text-xs sm:text-sm text-slate-300 bg-brand-900 whitespace-nowrap">
+                    <thead class="bg-brand-950 text-gold-400 uppercase text-[10px] sm:text-xs tracking-wider border-b border-slate-800">
+                        <tr>
+                            <th class="py-3 px-4">VIP Level</th>
+                            <th class="py-3 px-4">Required Turnover</th>
+                            <th class="py-3 px-4">Level Up Bonus</th>
+                            <th class="py-3 px-4">Monthly Reward</th>
+                            <th class="py-3 px-4">Cashback Rate</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-800">
+                        <tr class="hover:bg-brand-800/50 transition-colors">
+                            <td class="py-3 px-4 font-bold text-white flex items-center"><i class="fa-solid fa-crown text-amber-600 mr-2"></i> VIP 1</td>
+                            <td class="py-3 px-4">₹10,000</td>
+                            <td class="py-3 px-4 text-emerald-400 font-semibold">₹50</td>
+                            <td class="py-3 px-4">₹100</td>
+                            <td class="py-3 px-4 text-gold-400 font-bold">0.4%</td>
+                        </tr>
+                        <tr class="hover:bg-brand-800/50 transition-colors">
+                            <td class="py-3 px-4 font-bold text-white flex items-center"><i class="fa-solid fa-crown text-amber-500 mr-2"></i> VIP 2</td>
+                            <td class="py-3 px-4">₹50,000</td>
+                            <td class="py-3 px-4 text-emerald-400 font-semibold">₹250</td>
+                            <td class="py-3 px-4">₹500</td>
+                            <td class="py-3 px-4 text-gold-400 font-bold">0.6%</td>
+                        </tr>
+                        <tr class="hover:bg-brand-800/50 transition-colors">
+                            <td class="py-3 px-4 font-bold text-white flex items-center"><i class="fa-solid fa-crown text-yellow-400 mr-2"></i> VIP 3</td>
+                            <td class="py-3 px-4">₹2,00,000</td>
+                            <td class="py-3 px-4 text-emerald-400 font-semibold">₹1,000</td>
+                            <td class="py-3 px-4">₹2,000</td>
+                            <td class="py-3 px-4 text-gold-400 font-bold">0.8%</td>
+                        </tr>
+                        <tr class="hover:bg-brand-800/50 transition-colors">
+                            <td class="py-3 px-4 font-bold text-white flex items-center"><i class="fa-solid fa-crown text-emerald-400 mr-2"></i> VIP 4+</td>
+                            <td class="py-3 px-4">₹10,00,000+</td>
+                            <td class="py-3 px-4 text-emerald-400 font-semibold">₹5,000+</td>
+                            <td class="py-3 px-4">₹10,000+</td>
+                            <td class="py-3 px-4 text-gold-400 font-bold">1.2%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotions & Bonuses Section -->
+    <section id="bonus" class="py-14 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div>
+                <span class="text-gold-400 font-bold text-xs uppercase tracking-widest">Earnings</span>
+                <h2 class="text-2xl sm:text-4xl font-black mt-1.5 mb-3">Thrilling Promotions & Daily Bonuses</h2>
+                <p class="text-slate-300 leading-relaxed mb-4 text-xs sm:text-sm">
+                    Enjoy welcome packages, daily check-in rewards, recharge bonuses, and special festival deals designed to add extra value to your gameplay.
+                </p>
+                <ul class="space-y-2.5 text-slate-300 text-xs sm:text-sm mb-6">
+                    <li class="flex items-center"><i class="fa-solid fa-circle-check text-gold-400 mr-2.5"></i> Daily Check-in Bonus & Free Cash Rewards</li>
+                    <li class="flex items-center"><i class="fa-solid fa-circle-check text-gold-400 mr-2.5"></i> Telegram Channel Exclusive Promo Codes</li>
+                    <li class="flex items-center"><i class="fa-solid fa-circle-check text-gold-400 mr-2.5"></i> Invite Friends & Earn Generous Commission</li>
+                </ul>
+                <a href="<?php echo $registration_url; ?>" target="_blank" class="inline-flex items-center space-x-2 px-6 py-3 rounded-xl font-bold gradient-gold text-slate-950 shadow-md hover:opacity-95 transition-all text-xs sm:text-sm">
+                    <i class="fa-solid fa-gift"></i>
+                    <span>Claim Your Bonus Now</span>
+                </a>
+            </div>
+            
+            <div class="bg-brand-900 p-6 sm:p-7 rounded-2xl border border-gold-500/30 shadow-xl relative overflow-hidden">
+                <h3 class="text-xl font-bold mb-4 text-white">Daily Sign-Up & Deposit Perks</h3>
+                <div class="space-y-3">
+                    <div class="p-3.5 rounded-xl bg-brand-950 border border-slate-800 flex justify-between items-center">
+                        <div>
+                            <p class="font-bold text-white text-xs sm:text-sm">New User Register Bonus</p>
+                            <p class="text-[11px] text-slate-400">Credited instantly upon signup</p>
+                        </div>
+                        <span class="text-emerald-400 font-black text-base sm:text-lg"><?php echo $signup_bonus; ?></span>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-brand-950 border border-slate-800 flex justify-between items-center">
+                        <div>
+                            <p class="font-bold text-white text-xs sm:text-sm">Minimum First Deposit</p>
+                            <p class="text-[11px] text-slate-400">Unlock all 150+ games</p>
+                        </div>
+                        <span class="text-sky-400 font-black text-base sm:text-lg"><?php echo $min_deposit; ?></span>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-brand-950 border border-slate-800 flex justify-between items-center">
+                        <div>
+                            <p class="font-bold text-white text-xs sm:text-sm">Telegram Bonus Event</p>
+                            <p class="text-[11px] text-slate-400">Up to 100% sign-up bonus</p>
+                        </div>
+                        <span class="text-gold-400 font-black text-base sm:text-lg">100%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 sm:py-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+            <span class="text-gold-400 font-bold text-xs uppercase tracking-widest">Support</span>
+            <h2 class="text-2xl sm:text-4xl font-black mt-1.5 mb-2">Frequently Asked Questions</h2>
+            <p class="text-slate-400 text-xs sm:text-sm">Everything you need to know about getting started with BDG Game.</p>
+        </div>
+
+        <div class="space-y-3">
+            <div class="bg-brand-900 rounded-xl border border-slate-800 overflow-hidden shadow-sm">
+                <button onclick="toggleFaq(1)" class="w-full px-5 py-3.5 text-left font-bold text-white text-xs sm:text-sm flex justify-between items-center focus:outline-none">
+                    <span>How do I start playing on BDG Game?</span>
+                    <i id="faq-icon-1" class="fa-solid fa-chevron-down text-gold-400 transition-transform"></i>
+                </button>
+                <div id="faq-content-1" class="hidden px-5 pb-3 text-slate-400 text-xs sm:text-sm leading-relaxed border-t border-slate-800 pt-2.5">
+                    Register with a hassle-free process using our official link, deposit a minimum of ₹100 via UPI or Crypto into your secure account, and choose from over 150+ games to play immediately.
+                </div>
+            </div>
+
+            <div class="bg-brand-900 rounded-xl border border-slate-800 overflow-hidden shadow-sm">
+                <button onclick="toggleFaq(2)" class="w-full px-5 py-3.5 text-left font-bold text-white text-xs sm:text-sm flex justify-between items-center focus:outline-none">
+                    <span>What payment and withdrawal methods are supported?</span>
+                    <i id="faq-icon-2" class="fa-solid fa-chevron-down text-gold-400 transition-transform"></i>
+                </button>
+                <div id="faq-content-2" class="hidden px-5 pb-3 text-slate-400 text-xs sm:text-sm leading-relaxed border-t border-slate-800 pt-2.5">
+                    We support multiple payment channels including UPI (Google Pay, PhonePe, Paytm), Direct Bank Account (IMPS/NEFT), Bitcoin (BTC), and USD/USDT stablecoin cryptocurrencies for instant deposits and payouts.
+                </div>
+            </div>
+
+            <div class="bg-brand-900 rounded-xl border border-slate-800 overflow-hidden shadow-sm">
+                <button onclick="toggleFaq(3)" class="w-full px-5 py-3.5 text-left font-bold text-white text-xs sm:text-sm flex justify-between items-center focus:outline-none">
+                    <span>How can I withdraw my winnings?</span>
+                    <i id="faq-icon-3" class="fa-solid fa-chevron-down text-gold-400 transition-transform"></i>
+                </button>
+                <div id="faq-content-3" class="hidden px-5 pb-3 text-slate-400 text-xs sm:text-sm leading-relaxed border-t border-slate-800 pt-2.5">
+                    Once you earn rewards, visit your wallet dashboard, select withdrawal, input your correct UPI ID, bank details, or crypto wallet address, and request a payout. Transactions are processed swiftly.
+                </div>
+            </div>
+
+            <div class="bg-brand-900 rounded-xl border border-slate-800 overflow-hidden shadow-sm">
+                <button onclick="toggleFaq(4)" class="w-full px-5 py-3.5 text-left font-bold text-white text-xs sm:text-sm flex justify-between items-center focus:outline-none">
+                    <span>What is the invitation code and how do I use it?</span>
+                    <i id="faq-icon-4" class="fa-solid fa-chevron-down text-gold-400 transition-transform"></i>
+                </button>
+                <div id="faq-content-4" class="hidden px-5 pb-3 text-slate-400 text-xs sm:text-sm leading-relaxed border-t border-slate-800 pt-2.5">
+                    The invitation code is <strong class="text-gold-400"><?php echo $invitation_code; ?></strong>. When registering through our link, it applies automatically to ensure you qualify for welcome sign-up bonuses and special promotions.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Banner -->
+    <section class="py-14 sm:py-16 relative overflow-hidden bg-gradient-to-r from-brand-900 via-brand-950 to-amber-950/40 border-t border-slate-800 text-center shadow-xl">
+        <div class="max-w-3xl mx-auto px-4 relative z-10">
+            <h2 class="text-2xl sm:text-4xl font-black mb-3 text-white">Start Playing Today!</h2>
+            <p class="text-slate-300 max-w-xl mx-auto mb-6 text-xs sm:text-sm leading-relaxed">
+                Register now, claim your sign-up bonus, and experience fast UPI and Crypto payouts on India's premier gaming platform.
+            </p>
+            <a href="<?php echo $registration_url; ?>" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 px-8 sm:px-10 py-4 rounded-xl text-sm sm:text-base font-black gradient-gold text-slate-950 shadow-xl hover:scale-105 transition-all">
+                <i class="fa-solid fa-rocket"></i>
+                <span>Register & Claim Bonus Now</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer / Contact Us -->
+    <footer id="contact" class="bg-brand-950 border-t border-slate-900 text-slate-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="md:col-span-2">
+                <div class="flex items-center space-x-2 mb-3">
+                    <div class="w-7 h-7 rounded-lg gradient-gold flex items-center justify-center text-slate-950 font-black shadow-sm">B</div>
+                    <span class="text-lg font-black text-white tracking-wider">BDG GAME</span>
+                </div>
+                <p class="text-xs sm:text-sm leading-relaxed max-w-sm text-slate-400 mb-4">
+                    BDG game values communication and ensures users have access to reliable information, instant guidance, and customer support for all UPI, Bank, and Crypto transactions.
+                </p>
+                <div class="flex space-x-3">
+                    <a href="<?php echo $telegram_url; ?>" target="_blank" class="w-9 h-9 rounded-xl bg-brand-900 flex items-center justify-center hover:bg-gold-500 hover:text-slate-950 text-white transition-all shadow-sm"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="mailto:<?php echo $support_email; ?>" class="w-9 h-9 rounded-xl bg-brand-900 flex items-center justify-center hover:bg-gold-500 hover:text-slate-950 text-white transition-all shadow-sm"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-white font-semibold mb-3 text-xs uppercase tracking-wider">Quick Links</h4>
+                <ul class="space-y-2 text-xs sm:text-sm">
+                    <li><a href="#home" class="hover:text-gold-400 transition-colors">Home</a></li>
+                    <li><a href="#payments" class="hover:text-gold-400 transition-colors">Payment Methods</a></li>
+                    <li><a href="#games" class="hover:text-gold-400 transition-colors">Games Library</a></li>
+                    <li><a href="#vip" class="hover:text-gold-400 transition-colors">VIP System</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-semibold mb-3 text-xs uppercase tracking-wider">Legal & Support</h4>
+                <ul class="space-y-2 text-xs sm:text-sm">
+                    <li><a href="<?php echo $registration_url; ?>" target="_blank" class="hover:text-gold-400 transition-colors">Customer Service</a></li>
+                    <li><a href="#" class="hover:text-gold-400 transition-colors">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-gold-400 transition-colors">Terms & Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pt-6 border-t border-slate-900 flex flex-col sm:flex-row justify-between items-center text-[11px] text-slate-500">
+            <p>&copy; 2026 BDG Game. All rights reserved. 18+ Play Responsibly.</p>
+            <p class="mt-1 sm:mt-0">Code: <span class="text-gold-400 font-mono font-bold"><?php echo $invitation_code; ?></span></p>
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom Navigation Bar (App Experience) -->
+    <div class="fixed bottom-0 left-0 right-0 z-50 bg-brand-950/95 backdrop-blur-md border-t border-slate-800 py-1.5 px-3 flex justify-around items-center md:hidden shadow-2xl">
+        <a href="#home" class="flex flex-col items-center text-gold-400 text-[10px]">
+            <i class="fa-solid fa-house text-base mb-0.5"></i>
+            <span>Home</span>
+        </a>
+        <a href="#payments" class="flex flex-col items-center text-slate-400 hover:text-gold-400 text-[10px]">
+            <i class="fa-solid fa-wallet text-base mb-0.5"></i>
+            <span>Payments</span>
+        </a>
+        <a href="<?php echo $registration_url; ?>" target="_blank" class="flex flex-col items-center -mt-5 bg-gold-500 text-slate-950 w-12 h-12 rounded-full justify-center shadow-lg border-4 border-brand-950">
+            <span class="font-black text-[10px]">₹500</span>
+        </a>
+        <a href="#games" class="flex flex-col items-center text-slate-400 hover:text-gold-400 text-[10px]">
+            <i class="fa-solid fa-gift text-base mb-0.5"></i>
+            <span>Promotion</span>
+        </a>
+        <a href="<?php echo $registration_url; ?>" target="_blank" class="flex flex-col items-center text-slate-400 hover:text-gold-400 text-[10px]">
+            <i class="fa-solid fa-user text-base mb-0.5"></i>
+            <span>Account</span>
+        </a>
+    </div>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // FAQ Toggle function
+        function toggleFaq(id) {
+            const content = document.getElementById(`faq-content-${id}`);
+            const icon = document.getElementById(`faq-icon-${id}`);
+            
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+
+        // Copy Code Function with Toast Feedback
+        function copyCode(code) {
+            navigator.clipboard.writeText(code).then(() => {
+                showToast(`Invitation code '${code}' copied!`);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        }
+
+        // Toast Notification Trigger
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-message');
+            
+            toastMsg.textContent = message;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+
+        // Simulated Winner Ticker rotation
+        const winners = [
+            "🎉 Rahul_99*** won ₹14,500 via UPI instant payout!",
+            "🔥 Vikram_77*** secured 0.15 BTC in Slots Jackpot!",
+            "⭐ Anita_88*** completed daily check-in & won ₹500!",
+            "🚀 Amit_33*** successfully withdrew $350 USD via crypto!"
+        ];
+        let winnerIndex = 0;
+        setInterval(() => {
+            winnerIndex = (winnerIndex + 1) % winners.length;
+            const ticker = document.getElementById('winner-ticker');
+            if(ticker) {
+                ticker.style.opacity = '0';
+                setTimeout(() => {
+                    ticker.innerHTML = winners[winnerIndex];
+                    ticker.style.opacity = '1';
+                }, 200);
+            }
+        }, 4000);
+    </script>
+</body>
+</html>
