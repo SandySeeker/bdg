@@ -1,22 +1,3 @@
-<?php
-/**
- * Project Name: BDG Game Official Enterprise Landing Page
- * Version: 6.0.0 Ultimate SEO & Payment Integration Edition
- * Description: High-conversion responsive landing page with comprehensive deposit/withdrawal methods 
- *              (UPI, Bank Transfer, BTC, USD Crypto), advanced SEO structure, VIP system, and interactive FAQs.
- */
-
-// Core Configuration & Variables
-$site_name       = "BDG Game India";
-$invitation_code = "413385648747";
-$registration_url= "https://bdg7.vip//#/register?invitationCode=" . $invitation_code;
-$telegram_url    = "https://t.me/bdg_game_official";
-$support_email   = "support@bdg7.vip";
-$apk_size        = "8.20 MB";
-$min_deposit     = "₹100";
-$signup_bonus    = "₹21+";
-$total_games     = "150+";
-?>
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -28,7 +9,7 @@ $total_games     = "150+";
     <meta name="title" content="BDG Game Official - India's #1 Color Prediction, Lottery & Casino Platform | Login & Register">
     <meta name="description" content="Play BDG Game in India! Enjoy color prediction, lottery & slots. Register with code 413385648747 to claim ₹21+ sign-up bonus, instant UPI, Bank, and Crypto (BTC/USD) withdrawals.">
     <meta name="keywords" content="BDG Game, BDG Game login, BDG Game register, color prediction game India, win money online, online lottery India, slots casino app, BDG APK download, prediction gaming platform, fast withdrawal gaming site, sign up bonus game app, invitation code 413385648747, UPI deposit game, Bitcoin casino India, bank transfer gaming app, USD crypto betting site">
-    <meta name="author" content="<?php echo $site_name; ?>">
+    <meta name="author" content="BDG Game India">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://bdg7.vip/">
 
@@ -44,11 +25,11 @@ $total_games     = "150+";
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "name": "<?php echo $site_name; ?>",
+      "name": "BDG Game India",
       "url": "https://bdg7.vip/",
       "potentialAction": {
         "@type": "RegisterAction",
-        "target": "<?php echo $registration_url; ?>",
+        "target": "https://bdg7.vip//#/register?invitationCode=413385648747",
         "query-input": "required name=invitationCode"
       }
     }
@@ -130,7 +111,7 @@ $total_games     = "150+";
                 <span class="text-gold-400 font-medium"><i class="fa-solid fa-shield-halved mr-1"></i> 100% Secure SSL Encrypted & Multi-Currency Payouts</span>
             </div>
             <div class="flex items-center space-x-3">
-                <a href="<?php echo $telegram_url; ?>" target="_blank" class="text-sky-400 hover:text-sky-300 font-medium flex items-center">
+                <a href="https://t.me/bdg_game_official" target="_blank" class="text-sky-400 hover:text-sky-300 font-medium flex items-center">
                     <i class="fa-brands fa-telegram mr-1"></i> Telegram Channel
                 </a>
             </div>
@@ -163,11 +144,11 @@ $total_games     = "150+";
             </nav>
 
             <div class="flex items-center space-x-2 sm:space-x-3">
-                <a href="<?php echo $registration_url; ?>" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center space-x-1.5 px-3.5 py-2 rounded-xl text-xs font-bold bg-brand-900 hover:bg-brand-800 text-gold-400 border border-gold-500/30 transition-all">
+                <a href="https://bdg7.vip//#/register?invitationCode=413385648747" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center space-x-1.5 px-3.5 py-2 rounded-xl text-xs font-bold bg-brand-900 hover:bg-brand-800 text-gold-400 border border-gold-500/30 transition-all">
                     <i class="fa-solid fa-download"></i>
                     <span>Download</span>
                 </a>
-                <a href="<?php echo $registration_url; ?>" target="_blank" rel="noopener noreferrer" class="px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold gradient-gold text-slate-950 shadow-md hover:opacity-95 transition-all">
+                <a href="https://bdg7.vip//#/register?invitationCode=413385648747" target="_blank" rel="noopener noreferrer" class="px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold gradient-gold text-slate-950 shadow-md hover:opacity-95 transition-all">
                     <i class="fa-solid fa-user-plus mr-1"></i> Register
                 </a>
                 <button id="mobile-menu-btn" class="lg:hidden text-slate-300 hover:text-white p-1.5 text-lg focus:outline-none">
@@ -229,8 +210,8 @@ $total_games     = "150+";
                     <div class="max-w-sm mx-auto lg:mx-0 mb-6 sm:mb-8 bg-brand-900 p-3.5 sm:p-4 rounded-xl sm:rounded-2xl border border-gold-500/40 shadow-xl">
                         <p class="text-[11px] text-slate-400 uppercase font-semibold mb-1.5">Exclusive Invitation Code</p>
                         <div class="flex items-center justify-between bg-brand-950 px-3 py-2 rounded-lg sm:rounded-xl border border-slate-800">
-                            <span class="font-mono text-lg sm:text-xl font-bold text-gold-400 tracking-wider"><?php echo $invitation_code; ?></span>
-                            <button onclick="copyCode('<?php echo $invitation_code; ?>')" class="px-3 py-1.5 bg-gold-500 hover:bg-gold-400 text-slate-950 font-bold rounded-lg text-xs transition-all flex items-center space-x-1 shadow-md">
+                            <span class="font-mono text-lg sm:text-xl font-bold text-gold-400 tracking-wider">413385648747</span>
+                            <button onclick="copyCode('413385648747')" class="px-3 py-1.5 bg-gold-500 hover:bg-gold-400 text-slate-950 font-bold rounded-lg text-xs transition-all flex items-center space-x-1 shadow-md">
                                 <i class="fa-regular fa-copy"></i>
                                 <span>Copy</span>
                             </button>
@@ -239,7 +220,7 @@ $total_games     = "150+";
 
                     <!-- Main CTA Buttons -->
                     <div class="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-3">
-                        <a href="<?php echo $registration_url; ?>" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-6 sm:px-8 py-3.5 rounded-xl sm:rounded-2xl text-sm sm:text-base font-extrabold gradient-gold text-slate-950 shadow-xl animate-pulse-gold hover:opacity-95 transition-all flex items-center justify-center space-x-2">
+                        <a href="https://bdg7.vip//#/register?invitationCode=413385648747" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-6 sm:px-8 py-3.5 rounded-xl sm:rounded-2xl text-sm sm:text-base font-extrabold gradient-gold text-slate-950 shadow-xl animate-pulse-gold hover:opacity-95 transition-all flex items-center justify-center space-x-2">
                             <i class="fa-solid fa-gamepad"></i>
                             <span>Register & Claim Bonus</span>
                         </a>
@@ -288,11 +269,11 @@ $total_games     = "150+";
     <section class="py-8 bg-brand-900/40">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             <div class="p-4 rounded-xl bg-brand-900 border border-slate-800 shadow-sm">
-                <p class="text-2xl sm:text-3xl font-black text-gold-400 mb-0.5"><?php echo $total_games; ?></p>
+                <p class="text-2xl sm:text-3xl font-black text-gold-400 mb-0.5">150+</p>
                 <p class="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Total Games</p>
             </div>
             <div class="p-4 rounded-xl bg-brand-900 border border-slate-800 shadow-sm">
-                <p class="text-2xl sm:text-3xl font-black text-emerald-400 mb-0.5"><?php echo $signup_bonus; ?></p>
+                <p class="text-2xl sm:text-3xl font-black text-emerald-400 mb-0.5">₹21+</p>
                 <p class="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Sign-Up Bonus</p>
             </div>
             <div class="p-4 rounded-xl bg-brand-900 border border-slate-800 shadow-sm">
@@ -317,7 +298,7 @@ $total_games     = "150+";
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             <div class="bg-brand-900 p-4 sm:p-5 rounded-xl border border-slate-800 text-center shadow-sm">
                 <p class="text-[11px] text-slate-400 uppercase font-semibold mb-1">App Name</p>
-                <p class="text-sm sm:text-base font-bold text-gold-400"><?php echo $site_name; ?></p>
+                <p class="text-sm sm:text-base font-bold text-gold-400">BDG Game India</p>
             </div>
             <div class="bg-brand-900 p-4 sm:p-5 rounded-xl border border-slate-800 text-center shadow-sm">
                 <p class="text-[11px] text-slate-400 uppercase font-semibold mb-1">Category</p>
@@ -325,24 +306,24 @@ $total_games     = "150+";
             </div>
             <div class="bg-brand-900 p-4 sm:p-5 rounded-xl border border-slate-800 text-center shadow-sm">
                 <p class="text-[11px] text-slate-400 uppercase font-semibold mb-1">APK Size</p>
-                <p class="text-sm sm:text-base font-bold text-gold-400"><?php echo $apk_size; ?></p>
+                <p class="text-sm sm:text-base font-bold text-gold-400">8.20 MB</p>
             </div>
             <div class="bg-brand-900 p-4 sm:p-5 rounded-xl border border-slate-800 text-center shadow-sm">
                 <p class="text-[11px] text-slate-400 uppercase font-semibold mb-1">Register Bonus</p>
-                <p class="text-sm sm:text-base font-bold text-emerald-400"><?php echo $signup_bonus; ?></p>
+                <p class="text-sm sm:text-base font-bold text-emerald-400">₹21+</p>
             </div>
             <div class="bg-brand-900 p-4 sm:p-5 rounded-xl border border-slate-800 text-center shadow-sm">
                 <p class="text-[11px] text-slate-400 uppercase font-semibold mb-1">Min Deposit</p>
-                <p class="text-sm sm:text-base font-bold text-sky-400"><?php echo $min_deposit; ?></p>
+                <p class="text-sm sm:text-base font-bold text-sky-400">₹100</p>
             </div>
             <div class="bg-brand-900 p-4 sm:p-5 rounded-xl border border-slate-800 text-center shadow-sm">
                 <p class="text-[11px] text-slate-400 uppercase font-semibold mb-1">Total Games</p>
-                <p class="text-sm sm:text-base font-bold text-gold-400"><?php echo $total_games; ?></p>
+                <p class="text-sm sm:text-base font-bold text-gold-400">150+</p>
             </div>
         </div>
     </section>
 
-    <!-- NEW SECTION: Comprehensive Deposit & Withdrawal Methods -->
+    <!-- Comprehensive Deposit & Withdrawal Methods -->
     <section id="payments" class="py-16 bg-brand-900/50 border-y border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
@@ -511,7 +492,7 @@ $total_games     = "150+";
                         Engage in fast color prediction and lottery challenges with simple rules and instant results.
                     </p>
                 </div>
-                <a href="<?php echo $registration_url; ?>" target="_blank" class="w-full py-2.5 text-center rounded-xl bg-brand-950 text-gold-400 font-bold text-xs sm:text-sm border border-gold-500/30 hover:bg-gold-500 hover:text-slate-950 transition-all">
+                <a href="https://bdg7.vip//#/register?invitationCode=413385648747" target="_blank" class="w-full py-2.5 text-center rounded-xl bg-brand-950 text-gold-400 font-bold text-xs sm:text-sm border border-gold-500/30 hover:bg-gold-500 hover:text-slate-950 transition-all">
                     Play Lottery Games &rarr;
                 </a>
             </div>
@@ -526,7 +507,7 @@ $total_games     = "150+";
                         Explore exclusive mini-games optimized for mobile performance and updated daily.
                     </p>
                 </div>
-                <a href="<?php echo $registration_url; ?>" target="_blank" class="w-full py-2.5 text-center rounded-xl bg-brand-950 text-sky-400 font-bold text-xs sm:text-sm border border-sky-500/30 hover:bg-sky-500 hover:text-slate-950 transition-all">
+                <a href="https://bdg7.vip//#/register?invitationCode=413385648747" target="_blank" class="w-full py-2.5 text-center rounded-xl bg-brand-950 text-sky-400 font-bold text-xs sm:text-sm border border-sky-500/30 hover:bg-sky-500 hover:text-slate-950 transition-all">
                     Play Original Games &rarr;
                 </a>
             </div>
@@ -541,7 +522,7 @@ $total_games     = "150+";
                         Spin immersive slot reels with absolute fairness and equal opportunity to win.
                     </p>
                 </div>
-                <a href="<?php echo $registration_url; ?>" target="_blank" class="w-full py-2.5 text-center rounded-xl bg-brand-950 text-emerald-400 font-bold text-xs sm:text-sm border border-emerald-500/30 hover:bg-emerald-500 hover:text-slate-950 transition-all">
+                <a href="https://bdg7.vip//#/register?invitationCode=413385648747" target="_blank" class="w-full py-2.5 text-center rounded-xl bg-brand-950 text-emerald-400 font-bold text-xs sm:text-sm border border-emerald-500/30 hover:bg-emerald-500 hover:text-slate-950 transition-all">
                     Play Slots Games &rarr;
                 </a>
             </div>
@@ -617,7 +598,7 @@ $total_games     = "150+";
                     <li class="flex items-center"><i class="fa-solid fa-circle-check text-gold-400 mr-2.5"></i> Telegram Channel Exclusive Promo Codes</li>
                     <li class="flex items-center"><i class="fa-solid fa-circle-check text-gold-400 mr-2.5"></i> Invite Friends & Earn Generous Commission</li>
                 </ul>
-                <a href="<?php echo $registration_url; ?>" target="_blank" class="inline-flex items-center space-x-2 px-6 py-3 rounded-xl font-bold gradient-gold text-slate-950 shadow-md hover:opacity-95 transition-all text-xs sm:text-sm">
+                <a href="https://bdg7.vip//#/register?invitationCode=413385648747" target="_blank" class="inline-flex items-center space-x-2 px-6 py-3 rounded-xl font-bold gradient-gold text-slate-950 shadow-md hover:opacity-95 transition-all text-xs sm:text-sm">
                     <i class="fa-solid fa-gift"></i>
                     <span>Claim Your Bonus Now</span>
                 </a>
@@ -631,14 +612,14 @@ $total_games     = "150+";
                             <p class="font-bold text-white text-xs sm:text-sm">New User Register Bonus</p>
                             <p class="text-[11px] text-slate-400">Credited instantly upon signup</p>
                         </div>
-                        <span class="text-emerald-400 font-black text-base sm:text-lg"><?php echo $signup_bonus; ?></span>
+                        <span class="text-emerald-400 font-black text-base sm:text-lg">₹21+</span>
                     </div>
                     <div class="p-3.5 rounded-xl bg-brand-950 border border-slate-800 flex justify-between items-center">
                         <div>
                             <p class="font-bold text-white text-xs sm:text-sm">Minimum First Deposit</p>
                             <p class="text-[11px] text-slate-400">Unlock all 150+ games</p>
                         </div>
-                        <span class="text-sky-400 font-black text-base sm:text-lg"><?php echo $min_deposit; ?></span>
+                        <span class="text-sky-400 font-black text-base sm:text-lg">₹100</span>
                     </div>
                     <div class="p-3.5 rounded-xl bg-brand-950 border border-slate-800 flex justify-between items-center">
                         <div>
@@ -697,7 +678,7 @@ $total_games     = "150+";
                     <i id="faq-icon-4" class="fa-solid fa-chevron-down text-gold-400 transition-transform"></i>
                 </button>
                 <div id="faq-content-4" class="hidden px-5 pb-3 text-slate-400 text-xs sm:text-sm leading-relaxed border-t border-slate-800 pt-2.5">
-                    The invitation code is <strong class="text-gold-400"><?php echo $invitation_code; ?></strong>. When registering through our link, it applies automatically to ensure you qualify for welcome sign-up bonuses and special promotions.
+                    The invitation code is <strong class="text-gold-400">413385648747</strong>. When registering through our link, it applies automatically to ensure you qualify for welcome sign-up bonuses and special promotions.
                 </div>
             </div>
         </div>
@@ -710,7 +691,7 @@ $total_games     = "150+";
             <p class="text-slate-300 max-w-xl mx-auto mb-6 text-xs sm:text-sm leading-relaxed">
                 Register now, claim your sign-up bonus, and experience fast UPI and Crypto payouts on India's premier gaming platform.
             </p>
-            <a href="<?php echo $registration_url; ?>" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 px-8 sm:px-10 py-4 rounded-xl text-sm sm:text-base font-black gradient-gold text-slate-950 shadow-xl hover:scale-105 transition-all">
+            <a href="https://bdg7.vip//#/register?invitationCode=413385648747" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 px-8 sm:px-10 py-4 rounded-xl text-sm sm:text-base font-black gradient-gold text-slate-950 shadow-xl hover:scale-105 transition-all">
                 <i class="fa-solid fa-rocket"></i>
                 <span>Register & Claim Bonus Now</span>
             </a>
@@ -729,8 +710,8 @@ $total_games     = "150+";
                     BDG game values communication and ensures users have access to reliable information, instant guidance, and customer support for all UPI, Bank, and Crypto transactions.
                 </p>
                 <div class="flex space-x-3">
-                    <a href="<?php echo $telegram_url; ?>" target="_blank" class="w-9 h-9 rounded-xl bg-brand-900 flex items-center justify-center hover:bg-gold-500 hover:text-slate-950 text-white transition-all shadow-sm"><i class="fa-brands fa-telegram"></i></a>
-                    <a href="mailto:<?php echo $support_email; ?>" class="w-9 h-9 rounded-xl bg-brand-900 flex items-center justify-center hover:bg-gold-500 hover:text-slate-950 text-white transition-all shadow-sm"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://t.me/bdg_game_official" target="_blank" class="w-9 h-9 rounded-xl bg-brand-900 flex items-center justify-center hover:bg-gold-500 hover:text-slate-950 text-white transition-all shadow-sm"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="mailto:support@bdg7.vip" class="w-9 h-9 rounded-xl bg-brand-900 flex items-center justify-center hover:bg-gold-500 hover:text-slate-950 text-white transition-all shadow-sm"><i class="fa-solid fa-envelope"></i></a>
                 </div>
             </div>
 
@@ -747,7 +728,7 @@ $total_games     = "150+";
             <div>
                 <h4 class="text-white font-semibold mb-3 text-xs uppercase tracking-wider">Legal & Support</h4>
                 <ul class="space-y-2 text-xs sm:text-sm">
-                    <li><a href="<?php echo $registration_url; ?>" target="_blank" class="hover:text-gold-400 transition-colors">Customer Service</a></li>
+                    <li><a href="https://bdg7.vip//#/register?invitationCode=413385648747" target="_blank" class="hover:text-gold-400 transition-colors">Customer Service</a></li>
                     <li><a href="#" class="hover:text-gold-400 transition-colors">Privacy Policy</a></li>
                     <li><a href="#" class="hover:text-gold-400 transition-colors">Terms & Conditions</a></li>
                 </ul>
@@ -756,7 +737,7 @@ $total_games     = "150+";
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pt-6 border-t border-slate-900 flex flex-col sm:flex-row justify-between items-center text-[11px] text-slate-500">
             <p>&copy; 2026 BDG Game. All rights reserved. 18+ Play Responsibly.</p>
-            <p class="mt-1 sm:mt-0">Code: <span class="text-gold-400 font-mono font-bold"><?php echo $invitation_code; ?></span></p>
+            <p class="mt-1 sm:mt-0">Code: <span class="text-gold-400 font-mono font-bold">413385648747</span></p>
         </div>
     </footer>
 
@@ -770,14 +751,14 @@ $total_games     = "150+";
             <i class="fa-solid fa-wallet text-base mb-0.5"></i>
             <span>Payments</span>
         </a>
-        <a href="<?php echo $registration_url; ?>" target="_blank" class="flex flex-col items-center -mt-5 bg-gold-500 text-slate-950 w-12 h-12 rounded-full justify-center shadow-lg border-4 border-brand-950">
+        <a href="https://bdg7.vip//#/register?invitationCode=413385648747" target="_blank" class="flex flex-col items-center -mt-5 bg-gold-500 text-slate-950 w-12 h-12 rounded-full justify-center shadow-lg border-4 border-brand-950">
             <span class="font-black text-[10px]">₹500</span>
         </a>
         <a href="#games" class="flex flex-col items-center text-slate-400 hover:text-gold-400 text-[10px]">
             <i class="fa-solid fa-gift text-base mb-0.5"></i>
             <span>Promotion</span>
         </a>
-        <a href="<?php echo $registration_url; ?>" target="_blank" class="flex flex-col items-center text-slate-400 hover:text-gold-400 text-[10px]">
+        <a href="https://bdg7.vip//#/register?invitationCode=413385648747" target="_blank" class="flex flex-col items-center text-slate-400 hover:text-gold-400 text-[10px]">
             <i class="fa-solid fa-user text-base mb-0.5"></i>
             <span>Account</span>
         </a>
